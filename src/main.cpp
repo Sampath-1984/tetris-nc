@@ -1,3 +1,7 @@
+/*
+ * A simple clone of tetris made up of nearly 700 lines of code frantically written in a span of 72 hours.
+ */
+
 #include "tetris.h"
 
 int main(){
