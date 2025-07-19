@@ -1,15 +1,37 @@
 # tetris-nc
 
-## dependencies:
-- ncurses
+## Dependencies:
 - g++
+- make
+- ncurses
 
-## how to compile:
+* Both 'g++' and 'make' should already come pre-installed with your linux distribution.
+
+### Getting ncurses:
+For Debian/Ubuntu:
 ```
-$ g++ tetris.h tetris.cpp main.cpp rotate_block.cpp -o game -lncurses
+sudo apt install libncurses5-dev libncursesw5-dev
+```
+For Fedora:
+```
+sudo dnf install ncurses-devel
+```
+For Arch:
+```
+sudo pacman -S ncurses
 ```
 
-## how to play:
+## Building the program
+- Clone this repo
 ```
-$ ./game
+git clone
+```
+- Build with 'make'
+```
+cd tetris-nc/
+make
+```
+- Execute bin/tetris-nc
+```
+./bin/tetris-nc
 ```
