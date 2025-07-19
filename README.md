@@ -1,4 +1,5 @@
 # tetris-nc
+A simple tetris clone frantically written in about 700 lines of spaghetti code over a span of 72 hrs.
 
 ## Dependencies:
 - g++
