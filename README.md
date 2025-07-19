@@ -5,7 +5,7 @@
 - make
 - ncurses
 
-* Both 'g++' and 'make' should already come pre-installed with your linux distribution.
+Both 'g++' and 'make' should already come pre-installed with your linux distribution.
 
 ### Getting ncurses:
 For Debian/Ubuntu:
@@ -24,7 +24,7 @@ sudo pacman -S ncurses
 ## Building the program
 - Clone this repo
 ```
-git clone
+git clone https://github.com/Sampath-1984/tetris-nc.git
 ```
 - Build with 'make'
 ```
@@ -34,4 +34,8 @@ make
 - Execute bin/tetris-nc
 ```
 ./bin/tetris-nc
+```
+- Deleting the program
+```
+make clean
 ```
