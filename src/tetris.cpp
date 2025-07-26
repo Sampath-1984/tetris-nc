@@ -352,9 +352,9 @@ void window::move_right(){
 
 void window::move_sideways(){
 	int direction_var = getch();
-	if (direction_var == 'p' ) {
+	if ((direction_var == 'p')||(direction_var == 'P')){
 		check_pause();
-	} else if (direction_var == 'q'){
+	} else if ((direction_var == 'q')||(direction_var == 'Q')){
 		quit = true;
 	} else if (direction_var == KEY_RIGHT && !pause){
 		move_right();
