@@ -363,7 +363,7 @@ void window::move_sideways(){
 	} else if (direction_var == KEY_UP && !pause){
 		rotate_block();
 	} else if (direction_var == KEY_DOWN && !pause){
-		if (time_right_now()-space_time>=555){
+		if (time_right_now()-space_time>=565){
 			drop_block();
 		}
 		space_time = time_right_now();
@@ -414,11 +414,9 @@ void window::chunk_drop(int i){
 }
 
 bool window::game_over(){
-	int over=0;
-	for(int i=3;i<=17;i+=2){
-		if(bbarr[i][2]==true){over++;}
+	for (auto it : crblock){
+		if (bbarr[it.first-origin_x][it.second+1-origin_y]==true){return true;}
 	}
-	if (over>1){return true;}
 	return false;
 }
 
@@ -427,9 +425,9 @@ void window::start(){
 	make_block();
 	while(!quit){
 		generate_block();
+		if(game_over()){break;}
 		move_block();
 		check_line_complete();
 		usleep(del);
-		if(game_over()){break;}
 	}
 }
